@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserAuth;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//login page
+Route::get('/login',[UserAuth::class,'login']);
+//register page
+Route::get('/register',[UserAuth::class,'register']);
+//creating user
+Route::post('/register',[UserAuth::class,'registerUser'])->name('register-user');
+//logging in
+Route::post('/login-user',[UserAuth::class,'loginUser'])->name('login-user');
+//after logging in it will redirect you to this dashboard
+Route::get('/dashboard',[UserAuth::class,'dashboard']);
+//logout function
+Route::get('/logout',[UserAuth::class,'logout']);
