@@ -13,10 +13,10 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
     <body>
-        <div class="m-48 flex items-center justify-center">
+        <div class="min-h-screen flex justify-center items-center">
             <div class="w-full max-w-md">
                 <form
-                    class="bg-white shadow-lg rounded px-12 pt-6 pb-8 mb-4"
+                    class="md:py-12 md:px-12 bg-white rounded-2xl shadow-xl z-20"
                     action="{{route('register-user')}}"
                     method="POST"
                 >

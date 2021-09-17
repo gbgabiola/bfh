@@ -12,7 +12,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class="m-48 flex items-center justify-center">
+        <div class="min-h-screen flex justify-center items-center">
             <div class="w-full max-w-md">
                 <form
                     class="bg-white shadow-lg rounded px-12 pt-6 pb-8 mb-4"
@@ -36,6 +36,6 @@
     
         
             <!-- React JS -->        
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

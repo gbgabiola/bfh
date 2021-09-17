@@ -2310,7 +2310,8 @@ function Register() {
         "class": "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline",
         type: "password",
         placeholder: "Confirm Password",
-        name: "confirm_password",
+        id: "password_confirmation",
+        name: "password_confirmation",
         required: true
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {

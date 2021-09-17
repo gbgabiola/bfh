@@ -29,7 +29,7 @@ class UserAuth extends Controller
             'user_middlename'=>'required',
             'user_lastname'=>'required',
             'username'=>'required|unique:users',
-            'password'=>'required|min:5|max:50',
+            'password'=>'required|confirmed|min:6|max:50',
         ]);
 
         //creating new user
@@ -43,7 +43,7 @@ class UserAuth extends Controller
 
         //validate if success or fail the registration
         if ($res) {
-            return back()->with('success','You have registered successfully');
+            return redirect('login')->with('success','You have registered successfully');
         } else {
             return back()->with('fail','Something wrong!');
         }
@@ -67,7 +67,7 @@ class UserAuth extends Controller
             } 
             else 
             {
-                return back()->with('fail', 'Password not matches');
+                return back()->with('fail', 'Username or password does not match.');
             }
         } 
         else {
