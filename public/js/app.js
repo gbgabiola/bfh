@@ -2503,27 +2503,28 @@ var Products = function Products() {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("table", {
             className: "table border-2 table-responsive min-w-full text-center",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("thead", {
+              className: "bg-gray-200",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
-                  className: "px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
+                  className: "px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
                   children: "Image"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
-                  className: "px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
+                  className: "px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
                   children: "Name"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
-                  className: "px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
+                  className: "px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
                   children: "Quantity"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
-                  className: "px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
+                  className: "px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
                   children: "Price"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
-                  className: "px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
+                  className: "px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
                   children: "Category"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
-                  className: "px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
+                  className: "px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
                   children: "Edit"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
-                  className: "px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
+                  className: "px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50",
                   children: "Delete"
                 })]
               })
@@ -2548,20 +2549,20 @@ var Products = function Products() {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                     className: "px-6 py-4 whitespace-no-wrap border-b border-gray-200",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                      className: "text-sm leading-5 text-gray-500",
+                      className: "text-sm leading-5 text-gray-500 font-medium",
                       children: row.product_name
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                     className: "px-6 py-4 whitespace-no-wrap border-b border-gray-200",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                      className: "text-sm leading-5 text-gray-500",
+                      className: "text-sm leading-5 text-gray-500 font-medium",
                       children: row.product_quantity
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                     width: "15%",
                     className: "px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                      className: "text-sm leading-5 text-gray-500",
+                      className: "text-sm leading-5 text-gray-500 font-medium",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                         children: "\u20B1 "
                       }), row.product_price]
@@ -2569,13 +2570,13 @@ var Products = function Products() {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                     className: "px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                      className: "text-sm leading-5 text-gray-500",
+                      className: "text-sm leading-5 text-gray-500 font-medium",
                       children: row.category_id
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                     className: "px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                      className: "flex justify-center",
+                      className: "flex justify-center font-medium",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
                         href: "updateproducts?" + row.id,
                         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
