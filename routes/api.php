@@ -29,3 +29,4 @@ Route::resource('casket', CasketController::class);
 Route::resource('flower', FlowerController::class);
 Route::resource('product', ProductController::class);
 Route::resource('message', MessageController::class);
+Route::get('/', [ProductController::class, 'tblProducts']);

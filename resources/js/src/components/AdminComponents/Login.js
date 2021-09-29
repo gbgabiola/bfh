@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function Login() {
+export function Login() {
     return (
         <>
             <div class="text-gray-800 text-2xl flex justify-center border-b-2 py-2 mb-4">
@@ -55,7 +55,7 @@ function Login() {
     );
 }
 
-export default Login;
+// export default Login;
 
 if (document.getElementById("login")) {
     ReactDOM.render(<Login />, document.getElementById("login"));

@@ -19,6 +19,13 @@ class ProductController extends Controller
         return response()->json($products);
     }
 
+    public function tblProducts()
+    {
+        //
+        $data = Product::all();
+        return $data;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
