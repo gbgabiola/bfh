@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CasketController;
 use App\Http\Controllers\Api\FeatureController;
 use App\Http\Controllers\Api\FlowerController;
+use App\Http\Controllers\Api\MessageController;
+use App\Http\Controllers\Api\ProductController;
+use Symfony\Component\Mime\MessageConverter;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +27,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::resource('feature', FeatureController::class);
 Route::resource('casket', CasketController::class);
 Route::resource('flower', FlowerController::class);
+Route::resource('product', ProductController::class);
+Route::resource('message', MessageController::class);

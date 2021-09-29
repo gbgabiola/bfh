@@ -13,7 +13,7 @@ export const FeaturesMain = () => {
             console.log(err)
         });
     },[]);
-    if (!Array.isArray(features) || features.length <= 0) {
+    if (!features) {
         return null;
     }
     return (

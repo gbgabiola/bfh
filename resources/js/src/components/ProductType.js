@@ -19,7 +19,7 @@ export const ProductType = () => {
     }
     
     useEffect(() => {
-        axios.get(`/api/${category}`).then(res => {
+        axios.get("/api/product").then(res => {
             console.log(res.data)
             setProducts(res.data)
         }).catch(err => {
@@ -32,6 +32,7 @@ export const ProductType = () => {
     //         cleanup
     //     }
     // }, [input])
+    const filteredProducts = products.filter(product => product.category == category);
     return (
         <div className="bg-white">
             <div className="lg:container mx-auto md:py-20 py-10 px-4">
@@ -48,8 +49,8 @@ export const ProductType = () => {
                 }
             })}      
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3 pt-10">
-                    {products.map((product, index) => {
-                        if(index <= 3) {
+                    {filteredProducts.map((product, index) => {
+                        if(index <= 3 && product.category) {
                             return (
                                 <Link className="transform hover:scale-105 duration-300" to={`/products/${category}/${product.id}`}>
                                 <div className=" bg-white md:my-0 my-2 rounded-lg overflow-hidden shadow-2xl flex sm:flex-col flex-row">
@@ -59,7 +60,7 @@ export const ProductType = () => {
                                     <div className="md:p-6 p-1 md:w-full w-6/12 mx-auto">
                                         <h4 className="text-xl text-green-800 font-semibold">{product.name}</h4>
                                         <div>
-                                            <span>&bull; Type: {product.type}</span>
+                                            <span className="capitalize">&bull; Type: {product.type}</span>
                                         </div>
                                         {/* <div className="md:pt-6 pt-1">
                                              Select
@@ -80,7 +81,7 @@ export const ProductType = () => {
                                         <div className="md:p-6 p-1 md:w-full w-6/12 mx-auto">
                                             <h4 className="text-xl text-green-800 font-semibold">{product.name}</h4>
                                             <div>
-                                                <span>&bull; Type: {product.type}</span>
+                                                <span className="capitalize">&bull; Type: {product.type}</span>
                                             </div>
                                             {/* <div className="md:pt-6 pt-1">
                                                 Select
@@ -95,7 +96,7 @@ export const ProductType = () => {
                         
                     })}
                 </div>
-                    <div className={products.length <= 3 || !open ? "hidden" : "block"}>
+                    <div className={products.length <= 3 || open ? "hidden" : "block"}>
                         <div onClick={seeMore} className="flex justify-center mx-auto md:mt-16 mt-5">
                             <button className="bg-red-700 text-white py-3 px-5 font-semibold text-xl rounded-full shadow-2xl hover:bg-red-500 flex items-center"><span className="">Load More</span></button>
                         </div>
