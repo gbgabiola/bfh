@@ -26,6 +26,46 @@ class ProductController extends Controller
         return $data;
     }
 
+    public function productsTbl()
+    {
+        return view("Admin.products");
+    }
+
+    public function addProducts(Request $request)
+    {
+        // $data = new ProductModel();
+        // $data->product_name = $request->product_name;
+        // $data->product_price = $request->product_price;
+        // $data->product_quantity = $request->product_quantity;
+        // $data->product_size = $request->product_size;
+        // $data->category_id = $request->category_id;
+        // $data->save();
+        //validation of input types
+        $request->validate([
+            'product_name'=>'required',
+            'product_price'=>'required',
+            'product_quantity'=>'required',
+            'product_size'=>'required',
+            'category_id'=>'required',
+        ]);
+
+        //creating new user
+        $data = new Product();
+        $data->product_name = $request->product_name;
+        $data->product_price = $request->product_price;
+        $data->product_quantity = $request->product_quantity;
+        $data->product_size = $request->product_size;
+        $data->category_id = $request->category_id;
+        $res = $data->save();
+
+        //validate if success or fail the registration
+        if ($res) {
+            return redirect('productsTbl')->with('success','You have registered successfully');
+        } else {
+            return back()->with('fail','Something wrong!');
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      *

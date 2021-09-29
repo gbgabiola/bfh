@@ -45,27 +45,27 @@ export const Products = () => {
                 <div className="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
                     <div className="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 shadow sm:rounded-lg">
                         <table className="table border-2 table-responsive min-w-full text-center">
-                            <thead>
+                            <thead className="bg-gray-200">
                                 <tr>
-                                    <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                    <th className="px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
                                         Image
                                     </th>
-                                    <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                    <th className="px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
                                         Name
                                     </th>
-                                    <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                    <th className="px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
                                         Quantity
                                     </th>
-                                    <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                    <th className="px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
                                         Price
                                     </th>
-                                    <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                    <th className="px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
                                         Category
                                     </th>
-                                    <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                    <th className="px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
                                         Edit
                                     </th>
-                                    <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                    <th className="px-6 py-3 text-xs font-black leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
                                         Delete
                                     </th>
                                 </tr>
@@ -91,13 +91,13 @@ export const Products = () => {
                                             </td>
 
                                             <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                                <div className="text-sm leading-5 text-gray-500">
+                                                <div className="text-sm leading-5 text-gray-500 font-medium">
                                                     {row.product_name}
                                                 </div>
                                             </td>
 
                                             <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                                <div className="text-sm leading-5 text-gray-500">
+                                                <div className="text-sm leading-5 text-gray-500 font-medium">
                                                     {row.product_quantity}
                                                 </div>
                                             </td>
@@ -106,18 +106,18 @@ export const Products = () => {
                                                 width="15%"
                                                 className="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200"
                                             >
-                                                <div className="text-sm leading-5 text-gray-500">
+                                                <div className="text-sm leading-5 text-gray-500 font-medium">
                                                     <span>&#8369; </span>
                                                     {row.product_price}
                                                 </div>
                                             </td>
                                             <td className="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
-                                                <div className="text-sm leading-5 text-gray-500">
+                                                <div className="text-sm leading-5 text-gray-500 font-medium">
                                                     {row.category_id}
                                                 </div>
                                             </td>
                                             <td className="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
-                                                <div className="flex justify-center">
+                                                <div className="flex justify-center font-medium">
                                                     <a
                                                         href={
                                                             "updateproducts?" +
