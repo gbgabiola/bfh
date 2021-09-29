@@ -32,7 +32,7 @@ export const MySlider = () => {
                     {items.map((item, index) => {
                         return (
                             <div className={index === current ? 'opacity-100 duration-1000 scale-110' : ' opacity-0 duration-1000 ease-out'} key={index}>
-                                {index === current && (<img src={item.image} alt="item image" className=" object-fit h-96 w-full shadow-2xl rounded-xl"/>)}
+                                {index === current && (<img src={item.image} alt="item image" className=" object-fit md:h-96 h-50 w-full shadow-2xl rounded-xl"/>)}
                             </div>
                         )
                     })}
