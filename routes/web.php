@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuth;
+use App\Http\Controllers\api\ProductController;
 use App\Models\User;
 
 /*
@@ -47,5 +48,9 @@ Route::post('/login-user', [UserAuth::class, 'loginUser'])->name('login-user');
 Route::get('/dashboard', [UserAuth::class, 'dashboard'])->middleware('isLoggedIn');
 //Product Table
 Route::get('/products',[UserAuth::class,'products'])->middleware('isLoggedIn');
+//Add product page
+Route::get('/addproducts',[UserAuth::class,'addproducts'])->middleware('isLoggedIn');
+//Add product POST
+Route::post('/addproducts',[ProductController::class,'addProducts'])->middleware('isLoggedIn')->name('add-products');
 //logout function
 Route::get('/logout', [UserAuth::class, 'logout']);

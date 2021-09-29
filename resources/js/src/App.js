@@ -10,6 +10,7 @@ import { Signin } from "./pages/LoginRegister/Signin";
 import { Signup } from "./pages/LoginRegister/Signup";
 import { Sidebarpage } from "./pages/Admin/Sidebarpage";
 import { Productpage } from "./pages/Admin/Productpage";
+import { Addproductpage } from "./pages/Admin/Addproductpage";
 
 export default function App() {
     return (
@@ -41,6 +42,9 @@ export default function App() {
                 </Route>
                 <Route path="/products">
                     <Productpage />
+                </Route>
+                <Route path="/addproduct">
+                    <Addproductpage />
                 </Route>
             </Switch>
         </Router>
