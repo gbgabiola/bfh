@@ -28,7 +28,7 @@ class ProductController extends Controller
 
     public function productsTbl()
     {
-        return view("Admin.products");
+        return view("admin.products");
     }
 
     public function addProducts(Request $request)
@@ -60,7 +60,7 @@ class ProductController extends Controller
 
         //validate if success or fail the registration
         if ($res) {
-            return redirect('productsTbl')->with('success','You have registered successfully');
+            return redirect('products')->with('success','Added products successfully');
         } else {
             return back()->with('fail','Something wrong!');
         }
