@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function Register() {
+export function Register() {
     return (
         <>
             <div class="text-gray-800 text-2xl flex justify-center border-b-2 py-2 mb-4">
@@ -129,7 +129,7 @@ function Register() {
     );
 }
 
-export default Register;
+// export default Register;
 
 if (document.getElementById("register")) {
     ReactDOM.render(<Register />, document.getElementById("register"));
