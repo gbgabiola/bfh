@@ -12,6 +12,6 @@ require("./bootstrap");
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 require("./src/App");
-require("./components/Login");
-require("./components/Register");
-require("./components/Sidebar");
+// require("./components/Login");
+// require("./components/Register");
+// require("./components/Sidebar");

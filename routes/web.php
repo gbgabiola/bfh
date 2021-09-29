@@ -45,5 +45,7 @@ Route::post('/register', [UserAuth::class, 'registerUser'])->name('register-user
 Route::post('/login-user', [UserAuth::class, 'loginUser'])->name('login-user');
 //after logging in it will redirect you to this dashboard
 Route::get('/dashboard', [UserAuth::class, 'dashboard'])->middleware('isLoggedIn');
+//Product Table
+Route::get('/products',[UserAuth::class,'products'])->middleware('isLoggedIn');
 //logout function
 Route::get('/logout', [UserAuth::class, 'logout']);
