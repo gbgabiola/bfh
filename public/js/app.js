@@ -3513,19 +3513,19 @@ var FeaturesMain = function FeaturesMain() {
             className: "flex items-center",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FeatureIcon__WEBPACK_IMPORTED_MODULE_2__.FeatureIcon, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               className: "p-1",
-              children: "Benefit of Feature"
+              children: "Customizable"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
             className: "flex items-center",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FeatureIcon__WEBPACK_IMPORTED_MODULE_2__.FeatureIcon, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               className: "p-1",
-              children: "Benefit of Feature"
+              children: "Commemorative panels"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
             className: "flex items-center",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FeatureIcon__WEBPACK_IMPORTED_MODULE_2__.FeatureIcon, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               className: "p-1",
-              children: "Benefit of Feature"
+              children: "Internal lift hardware"
             })]
           })]
         })]
@@ -3607,8 +3607,8 @@ var FeaturesOthers = function FeaturesOthers() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
               className: "rounded-md",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-                className: "rounded-md",
-                src: "/images/hero_feature.jpg"
+                className: "rounded-md object-fit md:h-60 sm:h-40 h-32  w-full",
+                src: "/images/".concat(feature.image)
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
               className: "md:text-2xl text-xl pt-4 font-bold",
@@ -3622,19 +3622,19 @@ var FeaturesOthers = function FeaturesOthers() {
                 className: "flex items-center",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FeatureIcon__WEBPACK_IMPORTED_MODULE_1__.FeatureIcon, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                   className: "p-1",
-                  children: "Benefit of Feature"
+                  children: "Memory tube"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
                 className: "flex items-center",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FeatureIcon__WEBPACK_IMPORTED_MODULE_1__.FeatureIcon, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                   className: "p-1",
-                  children: "Benefit of Feature"
+                  children: "Customizable"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
                 className: "flex items-center",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FeatureIcon__WEBPACK_IMPORTED_MODULE_1__.FeatureIcon, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                   className: "p-1",
-                  children: "Benefit of Feature"
+                  children: "Internal lift hardware"
                 })]
               })]
             })]
@@ -3671,10 +3671,10 @@ var HomeHero = function HomeHero() {
         className: "md:w-6/12 w-full",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
           className: "pb-8 md:text-5xl text-3xl font-semibold",
-          children: "Your Best Value Proposition"
+          children: "Balungao Funeral Homes"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
           className: "md:text-xl text-md md:w-8/12 w-full",
-          children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          children: "A Funeral Service Company that has been providing professional and traditional funeral services to the Filipino public for over 15 years."
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
         className: "md:w-6/12 w-full pt-10 md:pt-0",
@@ -3698,6 +3698,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "MySlider": () => (/* binding */ MySlider)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -3714,12 +3715,13 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var items = [{
-  image: "/images/hero_feature.jpg"
+  category: "casket",
+  image: ["/images/sacred_casket1.png", "/images/sacred_casket2.png", "/images/sacred_casket3.png"]
 }, {
-  image: "https://images.unsplash.com/photo-1444492417251-9c84a5fa18e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=735&q=80"
-}, {
-  image: "https://images.unsplash.com/photo-1543039625-14cbd3802e7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80"
+  category: "flower",
+  image: ["/images/felicity1.png", "/images/felicity2.png", "/images/felicity3.png"]
 }];
 var MySlider = function MySlider() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
@@ -3727,7 +3729,11 @@ var MySlider = function MySlider() {
       current = _useState2[0],
       setCurrent = _useState2[1];
 
-  var length = items.length;
+  var _useParams = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useParams)(),
+      category = _useParams.category;
+
+  var length = 3;
+  console.log(category);
 
   var nextSlide = function nextSlide() {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -3739,10 +3745,15 @@ var MySlider = function MySlider() {
 
   console.log(current);
 
-  if (!Array.isArray(items) || items.length <= 0) {
+  if (!Array.isArray(items) || length <= 0) {
     return null;
   }
 
+  ;
+  var filteredItems = items.filter(function (item) {
+    return item.category == category;
+  });
+  console.log(filteredItems[0].image[0]);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     className: " relative h-full flex justify-center align-middle",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -3779,11 +3790,11 @@ var MySlider = function MySlider() {
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "rounded-lg",
-      children: items.map(function (item, index) {
+      children: filteredItems[0].image.map(function (item, index) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: index === current ? 'opacity-100 duration-1000 scale-110' : ' opacity-0 duration-1000 ease-out',
           children: index === current && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-            src: item.image,
+            src: item,
             alt: "item image",
             className: " object-fit md:h-96 h-50 w-full shadow-2xl rounded-xl"
           })
@@ -3878,10 +3889,10 @@ var ProductSelected = function ProductSelected() {
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                       className: "md:text-lg font-semibold uppercase",
                       children: "Price:"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
                       className: "pl-2 font-semibold md:text-lg capitalize",
-                      children: item.price
-                    }), " php"]
+                      children: ["\u20B1 ", item.price, ".00"]
+                    })]
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
                     className: "py-2",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
@@ -3953,19 +3964,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var heading = [{
   type: "promo",
   title: "Promo for this Month",
-  description: "If you don’t try this app, you won’t become the superhero you were meant to be"
+  description: "Available here are the best promos that you could get."
 }, {
   type: "casket",
-  title: "Best Selling product",
-  description: "If you don’t try this app, you won’t become the superhero you were meant to be"
+  title: "Best Selling Casket",
+  description: "Specially-designed caskets that are customizable!"
 }, {
   type: "flower",
   title: "Best Selling Flower Bouquet",
-  description: "If you don’t try this app, you won’t become the superhero you were meant to be"
+  description: "Funeral wreaths that are designed with variety of flowers"
 }, {
   type: "light",
   title: "Best Selling Lights",
-  description: "If you don’t try this app, you won’t become the superhero you were meant to be"
+  description: "Impeccably designed light fixtures"
 }];
 var ProductType = function ProductType() {
   var _useParams = (0,react_router__WEBPACK_IMPORTED_MODULE_3__.useParams)(),
@@ -4082,7 +4093,7 @@ var ProductType = function ProductType() {
           }
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: products.length <= 3 || open ? "hidden" : "block",
+        className: filteredProducts.length <= 3 || open ? "hidden" : "block",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           onClick: seeMore,
           className: "flex justify-center mx-auto md:mt-16 mt-5",
