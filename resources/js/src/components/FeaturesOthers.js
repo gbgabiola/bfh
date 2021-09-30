@@ -24,14 +24,14 @@ export const FeaturesOthers = () => {
                     return(
                         <div className="rounded-2xl bg-green-900 bg-opacity-20 p-10">
                             <div className="rounded-md">
-                                <img className="rounded-md" src="/images/hero_feature.jpg"/>
+                                <img className="rounded-md object-fit md:h-60 sm:h-40 h-32  w-full" src={`/images/${feature.image}`}/>
                             </div>
                             <h1 className="md:text-2xl text-xl pt-4 font-bold">{feature.title}</h1>
                             <p className="px-4 md:py-5 py-3 md:text-lg text-md font-semibold">{feature.description}</p>
                             <ul className="">
-                                <li className="flex items-center"><FeatureIcon/><span className="p-1">Benefit of Feature</span></li>
-                                <li className="flex items-center"><FeatureIcon/><span className="p-1">Benefit of Feature</span></li>
-                                <li className="flex items-center"><FeatureIcon/><span className="p-1">Benefit of Feature</span></li>
+                                <li className="flex items-center"><FeatureIcon/><span className="p-1">Memory tube</span></li>
+                                <li className="flex items-center"><FeatureIcon/><span className="p-1">Customizable</span></li>
+                                <li className="flex items-center"><FeatureIcon/><span className="p-1">Internal lift hardware</span></li>
                             </ul>
                         </div>
                     )

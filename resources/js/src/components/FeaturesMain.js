@@ -25,9 +25,9 @@ export const FeaturesMain = () => {
                         <p className="md:text-xl text-md md:w-8/12 w-full px-5">{features.description}</p>
                     </div>
                     <ul className="md:py-7 py-3">
-                        <li className="flex items-center"><FeatureIcon/><span className="p-1">Benefit of Feature</span></li>
-                        <li className="flex items-center"><FeatureIcon/><span className="p-1">Benefit of Feature</span></li>
-                        <li className="flex items-center"><FeatureIcon/><span className="p-1">Benefit of Feature</span></li>
+                        <li className="flex items-center"><FeatureIcon/><span className="p-1">Customizable</span></li>
+                        <li className="flex items-center"><FeatureIcon/><span className="p-1">Commemorative panels</span></li>
+                        <li className="flex items-center"><FeatureIcon/><span className="p-1">Internal lift hardware</span></li>
                     </ul>
                 </div>
                 <img className="md:w-6/12 w-full md:pt-0 pt-5" src="/images/hero_feature.jpg"/>

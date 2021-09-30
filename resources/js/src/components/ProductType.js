@@ -4,10 +4,10 @@ import { useParams } from 'react-router'
 import axios from 'axios';
 
 const heading = [
-    {type:"promo", title:"Promo for this Month", description:"If you don’t try this app, you won’t become the superhero you were meant to be"},
-    {type:"casket", title:"Best Selling product", description:"If you don’t try this app, you won’t become the superhero you were meant to be"},
-    {type:"flower", title:"Best Selling Flower Bouquet", description:"If you don’t try this app, you won’t become the superhero you were meant to be"},
-    {type:"light", title:"Best Selling Lights", description:"If you don’t try this app, you won’t become the superhero you were meant to be"}
+    {type:"promo", title:"Promo for this Month", description:"Available here are the best promos that you could get."},
+    {type:"casket", title:"Best Selling Casket", description:"Specially-designed caskets that are customizable!"},
+    {type:"flower", title:"Best Selling Flower Bouquet", description:"Funeral wreaths that are designed with variety of flowers"},
+    {type:"light", title:"Best Selling Lights", description:"Impeccably designed light fixtures"}
 ];
 export const ProductType = () => {
     
@@ -96,7 +96,7 @@ export const ProductType = () => {
                         
                     })}
                 </div>
-                    <div className={products.length <= 3 || open ? "hidden" : "block"}>
+                    <div className={filteredProducts.length <= 3 || open ? "hidden" : "block"}>
                         <div onClick={seeMore} className="flex justify-center mx-auto md:mt-16 mt-5">
                             <button className="bg-red-700 text-white py-3 px-5 font-semibold text-xl rounded-full shadow-2xl hover:bg-red-500 flex items-center"><span className="">Load More</span></button>
                         </div>

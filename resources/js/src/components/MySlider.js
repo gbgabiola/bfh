@@ -1,10 +1,14 @@
 import React, {useState} from 'react'
+import { useParams } from 'react-router'
 
-const items = [{image:"/images/hero_feature.jpg"}, {image:"https://images.unsplash.com/photo-1444492417251-9c84a5fa18e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=735&q=80"}, {image:"https://images.unsplash.com/photo-1543039625-14cbd3802e7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80"}]
+const items = [{category:"casket", image:["/images/sacred_casket1.png","/images/sacred_casket2.png", "/images/sacred_casket3.png"]},{category:"flower", image:["/images/felicity1.png","/images/felicity2.png","/images/felicity3.png"]}];
+
+
 export const MySlider = () => {
     const [current, setCurrent] = useState(0);
-    const length = items.length;
-
+    const { category } = useParams();
+    const length = 3;
+    console.log(category);
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1);
     };
@@ -13,9 +17,11 @@ export const MySlider = () => {
         
     };
     console.log(current)
-    if (!Array.isArray(items) || items.length <= 0) {
+    if (!Array.isArray(items) || length <= 0) {
         return null;
-    }
+    };
+    const filteredItems = items.filter(item => item.category == category);
+    console.log(filteredItems[0].image[0]);
     return (
         <div className=" relative h-full flex justify-center align-middle">
                 <div className=" bg-green-800 bg-opacity-20 p-2 rounded-xl absolute top-1/2 left-8 text-green-800 z-10 cursor-pointer select-none -m-6" onClick={prevSlide}>
@@ -29,10 +35,10 @@ export const MySlider = () => {
                     </svg>
                 </div>
                 <div className="rounded-lg">
-                    {items.map((item, index) => {
+                    {filteredItems[0].image.map((item, index) => {
                         return (
                             <div className={index === current ? 'opacity-100 duration-1000 scale-110' : ' opacity-0 duration-1000 ease-out'} key={index}>
-                                {index === current && (<img src={item.image} alt="item image" className=" object-fit md:h-96 h-50 w-full shadow-2xl rounded-xl"/>)}
+                                {index === current && (<img src={item} alt="item image" className=" object-fit md:h-96 h-50 w-full shadow-2xl rounded-xl"/>)}
                             </div>
                         )
                     })}

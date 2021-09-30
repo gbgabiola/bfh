@@ -30,7 +30,7 @@ export const ProductSelected = () => {
                                     <div className="px-10 py-2 text-gray-200">
                                         <p className="md:text-xl text-lg pb-5">{item.description}</p>
                                         <ul>
-                                            <li className="py-2"><span className="md:text-lg font-semibold uppercase">Price:</span><span className="pl-2 font-semibold md:text-lg capitalize">{item.price}</span> php</li>
+                                            <li className="py-2"><span className="md:text-lg font-semibold uppercase">Price:</span><span className="pl-2 font-semibold md:text-lg capitalize">&#8369; {item.price}.00</span></li>
                                             <li className="py-2"><span className="md:text-lg font-semibold uppercase">Type:</span><span className="pl-2 font-semibold md:text-lg capitalize">{item.type}</span></li>
                                             <li className="py-2"><span className="md:text-lg font-semibold uppercase">Size:</span><span className="pl-2 font-semibold md:text-lg capitalize">{item.size}</span></li>
                                         </ul>
