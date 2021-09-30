@@ -24,12 +24,11 @@ class ProductController extends Controller
         //
         $data = Product::all();
         return $data;
+        // $data = Product::latest()->paginate(5);
+        // return view('admin.products', compact('products'))
+        //     ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
-    public function productsTbl()
-    {
-        return view("Admin.products");
-    }
 
     public function addProducts(Request $request)
     {
@@ -60,7 +59,7 @@ class ProductController extends Controller
 
         //validate if success or fail the registration
         if ($res) {
-            return redirect('productsTbl')->with('success','You have registered successfully');
+            return redirect('products')->with('success','Added products successfully');
         } else {
             return back()->with('fail','Something wrong!');
         }
@@ -116,9 +115,20 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $data)
     {
         //
+        $request->validate([
+            'product_name'=>'',
+            'product_price'=>'',
+            'product_quantity'=>'',
+            'product_size'=>'',
+            'category_id'=>'',
+        ]);
+
+        $input = $request->all();
+        $data->update($input);
+        return redirect()->route('products.tblProducts')->with('success', 'Updated Successfully!');
     }
 
     /**
