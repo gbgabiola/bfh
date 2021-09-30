@@ -28,5 +28,6 @@ Route::resource('feature', FeatureController::class);
 Route::resource('casket', CasketController::class);
 Route::resource('flower', FlowerController::class);
 Route::resource('product', ProductController::class);
-Route::resource('message', MessageController::class);
+Route::post('message', [MessageController::class, 'store']);
+Route::get('message', [MessageController::class, 'index']);
 Route::get('/', [ProductController::class, 'tblProducts']);

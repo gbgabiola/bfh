@@ -1,36 +1,61 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import swal from 'sweetalert';
 
 function ContactForm() {
+    const [show, setShow] = useState(false);
     const [clientMessage, setClientMessage] = useState({
         firstname: "",
         lastname: "",
         email: "",
         mobile: "",
         address: "",
-        message: ""
+        message: "",
+        error_list:[]
     });
     const {firstname, lastname, email, mobile, address, message} = clientMessage;
     const inputChange = e => {
         setClientMessage({...clientMessage, [e.target.name]: e.target.value });
     }
-    async function handleSubmit() {
-        let result = await axios.post('http://127.0.0.1:8000/api/message', clientMessage);
-        console.log(clientMessage);
-        // To Clear all fields
-        setClientMessage({
-            firstname: "",
-            lastname: "",
-            email: "",
-            mobile: "",
-            address: "",
-            message: ""});
+    const handleSubmit = () => {
+        axios.post('/api/message', clientMessage).then(res => {
+        if(res.data.status === 200){
+            swal("Success",res.data.success,"success");
+            console.log(clientMessage);
+             // To Clear all fields
+            setClientMessage({
+                firstname: "",
+                lastname: "",
+                email: "",
+                mobile: "",
+                address: "",
+                message: ""});
+            setShow(false);
+        }
+        else if(res.data.status === 400) {
+            setClientMessage({...clientMessage, error_list:res.data.errors});
+            console.log(clientMessage);
+            setShow(true);
+        }
+        });
+    }
+    // Variable for displaying validation rrors
+    let display_errors = [];
+    if(clientMessage.error_list){
+        display_errors = [
+            clientMessage.error_list.firstname,
+            clientMessage.error_list.lastname,
+            clientMessage.error_list.email,
+            clientMessage.error_list.mobile,
+            clientMessage.error_list.address,
+            clientMessage.error_list.message,
+        ]
     }
     return (
         <div>
             <div className="bg-green-900 p-5 bg-opacity-40">
                         <div className="grid sm:grid-cols-2 gap-4">
-                            <div className="table ">
+                            <div className="table">
                                 <div className="bg-gray-200 p-1 rounded-l-md table-cell w-5 align-middle">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-800" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
@@ -38,7 +63,7 @@ function ContactForm() {
                                 </div>
                                 <div className="table-cell">
                                     <input className=" focus:ring-2 focus:ring-green-500 border-gray-300 pl-4 h-9 w-full" type="text" name="firstname" placeholder="First Name" value={firstname} onChange={e => inputChange(e)}/>
-                                </div>
+                                </div>                               
                             </div>
                             <div className="table ">
                                 <div className="bg-gray-200 p-1 rounded-l-md table-cell w-5 align-middle">
@@ -58,7 +83,7 @@ function ContactForm() {
                                     </svg>
                                 </div>
                                 <div className="table-cell">
-                                    <input className=" focus:ring-2 focus:ring-green-500 border-gray-300 pl-4 h-9 w-full" type="email" name="email" placeholder="Email" value={email} onChange={e => inputChange(e)}/>
+                                    <input className=" focus:ring-2 focus:ring-green-500 border-gray-300 pl-4 h-9 w-full" type="email" name="email" required placeholder="Email" value={email} onChange={e => inputChange(e)}/>
                                 </div>
                             </div>
                             <div className="table ">
@@ -93,8 +118,15 @@ function ContactForm() {
                                 </div>
                             </div>
                         </div>
-                    <button className="bg-green-700 text-white mt-5 py-2 px-4 font-regular text-xl rounded-md shadow-2xl hover:opacity-70" type="submit" onClick={handleSubmit}><span className="">Send</span></button>
+                        <button className="bg-green-700 text-white mt-5 py-2 px-4 font-regular text-xl rounded-md shadow-2xl hover:opacity-70" type="submit" onClick={handleSubmit}><span className="">Send</span></button>  
             </div>
+
+                    <div className={!show ? "hidden" : "my-5 bg-gray-400 bg-opacity-30 mx-auto inline-block rounded-lg p-5"}>
+                        {display_errors.map((err) => {
+                            return (<p className="text-red-500 font-medium">{err}</p>)
+                        })}
+                    </div>
+
         </div>
     )
 }
