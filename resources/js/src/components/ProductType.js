@@ -32,7 +32,7 @@ export const ProductType = () => {
     //         cleanup
     //     }
     // }, [input])
-    const filteredProducts = products.filter(product => product.category == category);
+    const filteredProducts = products.filter(product => product.category_id == category);
     return (
         <div className="bg-white">
             <div className="lg:container mx-auto md:py-20 py-10 px-4">
@@ -50,17 +50,17 @@ export const ProductType = () => {
             })}      
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3 pt-10">
                     {filteredProducts.map((product, index) => {
-                        if(index <= 3 && product.category) {
+                        if(index <= 3 && product.category_id) {
                             return (
                                 <Link className="transform hover:scale-105 duration-300" to={`/products/${category}/${product.id}`}>
                                 <div className=" bg-white md:my-0 my-2 rounded-lg overflow-hidden shadow-2xl flex sm:flex-col flex-row">
                                     <div className="sm:w-full w-5/12" >
-                                        <img className="object-fit md:h-60 sm:h-40 h-32  w-full" src={`/images/${product.image}`}/>
+                                        <img className="object-fit md:h-60 sm:h-40 h-32  w-full" src={`/images/${product.product_image}`}/>
                                     </div>
                                     <div className="md:p-6 p-1 md:w-full w-6/12 mx-auto">
                                         <h4 className="text-xl text-green-800 font-semibold">{product.name}</h4>
                                         <div>
-                                            <span className="capitalize">&bull; Type: {product.type}</span>
+                                            <span className="capitalize">&bull; Type: {product.product_type}</span>
                                         </div>
                                         {/* <div className="md:pt-6 pt-1">
                                              Select
@@ -76,12 +76,12 @@ export const ProductType = () => {
                                         <div className={open ? "block" : "hidden"}>
                                     <div className=" bg-white md:my-0 my-2 rounded-lg overflow-hidden shadow-2xl flex sm:flex-col flex-row">
                                         <div className="sm:w-full w-5/12" >
-                                            <img className="object-fit md:h-60 sm:h-40 h-32  w-full" src={`/images/${product.image}`}/>
+                                            <img className="object-fit md:h-60 sm:h-40 h-32  w-full" src={`/images/${product.product_image}`}/>
                                         </div>
                                         <div className="md:p-6 p-1 md:w-full w-6/12 mx-auto">
-                                            <h4 className="text-xl text-green-800 font-semibold">{product.name}</h4>
+                                            <h4 className="text-xl text-green-800 font-semibold">{product.product_name}</h4>
                                             <div>
-                                                <span className="capitalize">&bull; Type: {product.type}</span>
+                                                <span className="capitalize">&bull; Type: {product.product_type}</span>
                                             </div>
                                             {/* <div className="md:pt-6 pt-1">
                                                 Select
