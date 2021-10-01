@@ -11,7 +11,8 @@
 
         <!--tailwindcss-->
         <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.css">
+        
         <!--external css -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
@@ -20,25 +21,33 @@
         
         <div class="relative min-h-screen md:flex">
             <!-- dashboard components -->  
-            <div id="sidebar"></div> 
-            <div class="flex-1 md:p-10 md:text-2xl font-bold">
-                <div id="dashboard"></div>
+            <div id="sidebar"></div>
+            <div class="flex-1 font-bold">
+            <form
+                class="md:py-12 md:px-12 bg-white rounded-2xl shadow-xl z-20"
+                action="{{route('add-products')}}"
+                method="POST">
+                @csrf
+                <div id="addproducts"></div>
+            </form>
             </div>
+            
         </div>
 
 
 
             <!-- React JS -->        
-        <script src="{{mix('js/app.js')}}"></script>
+        <script src="{{ mix('js/app.js') }}"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.js"></script>
         <script type="text/javascript">
         // grab everything we need
-            const btn = document.querySelector(".mobile-menu-button");
-            const sidebar = document.querySelector(".sidebar");
+        const btn = document.querySelector(".mobile-menu-button");
+        const sidebar = document.querySelector(".sidebar");
 
         // add our event listener for the click
-            btn.addEventListener("click", () => {
-                sidebar.classList.toggle("-translate-x-full");
-            });
+        btn.addEventListener("click", () => {
+            sidebar.classNameNameNameList.toggle("-translate-x-full");
+        });
         </script>
     </body>
 </html>

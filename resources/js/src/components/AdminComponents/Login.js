@@ -1,9 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function Login() {
+export function Login() {
     return (
         <>
+            <div class="text-gray-800 text-2xl flex justify-center py-2">
+                <div>
+                    <img
+                        className="h-32 md:max-h-screen my--8 md:my--8 mx-8 md:mx-8"
+                        src="/images/BFH_Logo.png"
+                        alt="Balungao Funeral Homes Logo"
+                    />
+                </div>
+            </div>
             <div class="text-gray-800 text-2xl flex justify-center border-b-2 py-2 mb-4">
                 <strong>Log-in</strong>
             </div>
@@ -55,7 +64,7 @@ function Login() {
     );
 }
 
-export default Login;
+// export default Login;
 
 if (document.getElementById("login")) {
     ReactDOM.render(<Login />, document.getElementById("login"));

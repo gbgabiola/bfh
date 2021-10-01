@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Link, NavLink } from "react-router-dom";
 
-function Sidebar() {
+export const Sidebar = () => {
     return (
         <>
-            <div className="relative min-h-screen md:flex">
+            <div className="md:relative md:min-h-full md:flex">
                 {/* mobile menu bar */}
                 <div className="bg-gray-800 text-gray-100 flex justify-between md:hidden">
                     <a href="#" className="block p-4 text-white font-bold">
@@ -30,45 +31,49 @@ function Sidebar() {
                 </div>
 
                 {/* Sidebar */}
-                <div className="sidebar bg-blue-800 text-blue-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+                <div className="sidebar bg-green-800 text-red-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
                     <a
-                        href="#"
+                        href="/dashboard"
                         className="text-white flex items-center space-x-2 px-4"
                     >
                         <span className="text-2xl font-extrabold text-center">
-                            <img src="" alt="Balungao Funeral Homes Logo" />
+                            <img
+                                className="h-32 md:max-h-screen my--8 md:my--8 mx-8 md:mx-8"
+                                src="/images/BFH_Logo.png"
+                                alt="Balungao Funeral Homes Logo"
+                            />
                         </span>
                     </a>
 
                     <nav>
                         <hr />
                         <a
-                            href="#"
-                            className="font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white"
+                            href="/dashboard"
+                            className="md:text-xl font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-red-500 hover:text-black"
                         >
                             Dashboard
                         </a>
                         <a
-                            href=""
-                            className="font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white"
+                            href="/products"
+                            className="md:text-xl font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-red-500 hover:text-black"
                         >
                             Products
                         </a>
                         <a
-                            href=""
-                            className="font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white"
+                            href="/categories"
+                            className="md:text-xl font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-red-500 hover:text-black"
                         >
                             Categories
                         </a>
                         <a
-                            href=""
-                            className="font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white"
+                            href="/customers"
+                            className="md:text-xl font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-red-500 hover:text-black"
                         >
                             Customers
                         </a>
                         <a
                             href=""
-                            className="font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white"
+                            className="md:text-xl font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-red-500 hover:text-black"
                         >
                             Deceased
                         </a>
@@ -76,7 +81,7 @@ function Sidebar() {
                         <br />
                         <a
                             href="logout"
-                            className="font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white"
+                            className="md:text-xl font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-red-500 hover:text-black"
                         >
                             Logout
                         </a>
@@ -89,19 +94,10 @@ function Sidebar() {
             </div>
         </>
     );
-}
+};
 
-export default Sidebar;
+// export default Sidebar;
 
 if (document.getElementById("sidebar")) {
     ReactDOM.render(<Sidebar />, document.getElementById("sidebar"));
 }
-
-// grab everything we need
-const btn = document.querySelector(".mobile-menu-button");
-const sidebar = document.querySelector(".sidebar");
-
-// add our event listener for the click
-btn.addEventListener("click", () => {
-    sidebar.classList.toggle("-translate-x-full");
-});
