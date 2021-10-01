@@ -60,13 +60,13 @@ export const Sidebar = () => {
                             Products
                         </a>
                         <a
-                            href="#"
+                            href="/categories"
                             className="md:text-xl font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-red-500 hover:text-black"
                         >
                             Categories
                         </a>
                         <a
-                            href=""
+                            href="/customers"
                             className="md:text-xl font-black block py-2.5 px-4 rounded transition duration-200 hover:bg-red-500 hover:text-black"
                         >
                             Customers

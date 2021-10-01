@@ -37,6 +37,9 @@ Route::get('/products/{product}', function () {
 Route::get('/products/{product}/{id}', function () {
     return view('welcome');
 });
+Route::get('edit', function () {
+    return view('admin/edit');
+});
 //login page
 Route::get('/login', [UserAuth::class, 'login'])->middleware('alreadyLoggedIn');
 //register page
@@ -54,5 +57,9 @@ Route::resource("products", AdminproductController::class)->middleware('isLogged
 Route::get('/addproducts',[UserAuth::class,'addproducts'])->middleware('isLoggedIn');
 //Add product POST
 Route::post('/addproducts',[ProductController::class,'addProducts'])->middleware('isLoggedIn')->name('add-products');
+//Categories page
+Route::get('/categories',[UserAuth::class,'categories'])->middleware('isLoggedIn');
+//Categories page
+Route::get('/customers',[UserAuth::class,'customers'])->middleware('isLoggedIn');
 //logout function
 Route::get('/logout', [UserAuth::class, 'logout']);

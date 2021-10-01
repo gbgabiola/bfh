@@ -94,6 +94,24 @@ class UserAuth extends Controller
         return view('admin/products', compact('data'));
     }
 
+    public function categories()
+    {
+        $data = array();
+        if(Session::has('loginID')){
+            $data = User::where('user_id', '=', Session::get('loginID'))->first();
+        }
+        return view('admin/categories', compact('data'));
+    }
+
+    public function customers()
+    {
+        $data = array();
+        if(Session::has('loginID')){
+            $data = User::where('user_id', '=', Session::get('loginID'))->first();
+        }
+        return view('admin/customers', compact('data'));
+    }
+
     public function addproducts()
     {
         $data = array();

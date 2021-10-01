@@ -11,7 +11,9 @@ import { Signup } from "./pages/LoginRegister/Signup";
 import { Sidebarpage } from "./pages/Admin/Sidebarpage";
 import { Productpage } from "./pages/Admin/Productpage";
 import { Addproductpage } from "./pages/Admin/Addproductpage";
-// import { Updateproductpage } from "./pages/Admin/Updateproductpage";
+import { Updateproductpage } from "./pages/Admin/Updateproductpage";
+import { Categoriespage } from "./pages/Admin/Categoriespage";
+import { Customerpage } from "./pages/Admin/Customerpage";
 
 export default function App() {
     return (
@@ -44,12 +46,18 @@ export default function App() {
                 <Route path="/products">
                     <Productpage />
                 </Route>
-                <Route path="/addproduct">
+                <Route path="/addproductasd">
                     <Addproductpage />
                 </Route>
-                {/* <Route path="/products/:edit">
+                <Route path="/products/:edit">
                     <Updateproductpage />
-                </Route> */}
+                </Route>
+                <Route path="/categories">
+                    <Categoriespage />
+                </Route>
+                <Route path="/customer">
+                    <Customerpage />
+                </Route>
             </Switch>
         </Router>
     );

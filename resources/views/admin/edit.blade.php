@@ -42,11 +42,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
                 @endif   
-                {{-- <div id="updateproducts"></div> --}}
-                <form action="{{route('products.update', $product->id)}}" method="POST" enctype="multipart/form-data">
+                <div id="updateproducts"></div>
+                <form action="" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                    <div class="max-w-full">
+                    <div class="mx-40">
                         <div class="text-gray-800 text-2xl flex justify-center border-b-2 py-2 mb-4">
                             <strong>Add Products</strong>
                         </div>
@@ -63,7 +63,7 @@
                                 name="product_name"
                                 id="product_name"
                                 type="text"
-                                value="{{$product->product_name}}"
+                                
                                 placeholder="Enter Product Name"
                             />
                             <span id="error-firstname"></span>
@@ -81,7 +81,7 @@
                                 name="product_price"
                                 id="product_price"
                                 type="number"
-                                value="{{$product->product_price}}"
+                                
                                 placeholder="Enter Product Price"
                             />
                         </div>
@@ -98,7 +98,7 @@
                                 name="product_quantity"
                                 id="product_quantity"
                                 type="number"
-                                value="{{$product->product_quantity}}"
+                                
                                 placeholder="Enter Quantity"
                             />
                         </div>
@@ -115,7 +115,7 @@
                                 name="product_size"
                                 id="product_size"
                                 type="text"
-                                value="{{$product->product_size}}"
+                                
                                 placeholder="Enter Size"
                             />
                         </div>
@@ -132,7 +132,7 @@
                                 placeholder="Enter Category"
                                 name="category_id"
                                 id="category_id"
-                                value="{{$product->category_id}}"
+                                
                                 required
                             />
                         </div>
