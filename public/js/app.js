@@ -3860,7 +3860,7 @@ var ProductSelected = function ProductSelected() {
     });
   }, []);
   var filteredItems = items.filter(function (item) {
-    return item.category == category;
+    return item.category_id == category;
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "bg-gray-100",
@@ -3877,12 +3877,12 @@ var ProductSelected = function ProductSelected() {
               className: "md:w-1/2 w-full",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
                 className: "md:text-3xl text-xl font-semibold md:pb-4 pb-1 text-white md:mt-0 mt-5 md:pl-0 pl-10",
-                children: item.name
+                children: item.product_name
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 className: "px-10 py-2 text-gray-200",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
                   className: "md:text-xl text-lg pb-5",
-                  children: item.description
+                  children: item.product_description
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
                     className: "py-2",
@@ -3891,7 +3891,7 @@ var ProductSelected = function ProductSelected() {
                       children: "Price:"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
                       className: "pl-2 font-semibold md:text-lg capitalize",
-                      children: ["\u20B1 ", item.price, ".00"]
+                      children: ["\u20B1 ", item.product_price, ".00"]
                     })]
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
                     className: "py-2",
@@ -3900,7 +3900,7 @@ var ProductSelected = function ProductSelected() {
                       children: "Type:"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                       className: "pl-2 font-semibold md:text-lg capitalize",
-                      children: item.type
+                      children: item.product_type
                     })]
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
                     className: "py-2",
@@ -3909,7 +3909,7 @@ var ProductSelected = function ProductSelected() {
                       children: "Size:"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                       className: "pl-2 font-semibold md:text-lg capitalize",
-                      children: item.size
+                      children: item.product_size
                     })]
                   })]
                 })]
@@ -4011,7 +4011,7 @@ var ProductType = function ProductType() {
   // }, [input])
 
   var filteredProducts = products.filter(function (product) {
-    return product.category == category;
+    return product.category_id == category;
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "bg-white",
@@ -4035,7 +4035,7 @@ var ProductType = function ProductType() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "grid sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3 pt-10",
         children: filteredProducts.map(function (product, index) {
-          if (index <= 3 && product.category) {
+          if (index <= 3 && product.category_id) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
               className: "transform hover:scale-105 duration-300",
               to: "/products/".concat(category, "/").concat(product.id),
@@ -4045,7 +4045,7 @@ var ProductType = function ProductType() {
                   className: "sm:w-full w-5/12",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
                     className: "object-fit md:h-60 sm:h-40 h-32  w-full",
-                    src: "/images/".concat(product.image)
+                    src: "/images/".concat(product.product_image)
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                   className: "md:p-6 p-1 md:w-full w-6/12 mx-auto",
@@ -4055,7 +4055,7 @@ var ProductType = function ProductType() {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
                       className: "capitalize",
-                      children: ["\u2022 Type: ", product.type]
+                      children: ["\u2022 Type: ", product.product_type]
                     })
                   })]
                 })]
@@ -4073,17 +4073,17 @@ var ProductType = function ProductType() {
                     className: "sm:w-full w-5/12",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
                       className: "object-fit md:h-60 sm:h-40 h-32  w-full",
-                      src: "/images/".concat(product.image)
+                      src: "/images/".concat(product.product_image)
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                     className: "md:p-6 p-1 md:w-full w-6/12 mx-auto",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
                       className: "text-xl text-green-800 font-semibold",
-                      children: product.name
+                      children: product.product_name
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
                         className: "capitalize",
-                        children: ["\u2022 Type: ", product.type]
+                        children: ["\u2022 Type: ", product.product_type]
                       })
                     })]
                   })]
