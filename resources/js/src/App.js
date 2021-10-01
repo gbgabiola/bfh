@@ -11,6 +11,7 @@ import { Signup } from "./pages/LoginRegister/Signup";
 import { Sidebarpage } from "./pages/Admin/Sidebarpage";
 import { Productpage } from "./pages/Admin/Productpage";
 import { Addproductpage } from "./pages/Admin/Addproductpage";
+// import { Updateproductpage } from "./pages/Admin/Updateproductpage";
 
 export default function App() {
     return (
@@ -46,6 +47,9 @@ export default function App() {
                 <Route path="/addproduct">
                     <Addproductpage />
                 </Route>
+                {/* <Route path="/products/:edit">
+                    <Updateproductpage />
+                </Route> */}
             </Switch>
         </Router>
     );

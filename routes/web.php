@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminproductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\api\ProductController;
@@ -47,7 +48,8 @@ Route::post('/login-user', [UserAuth::class, 'loginUser'])->name('login-user');
 //after logging in it will redirect you to this dashboard
 Route::get('/dashboard', [UserAuth::class, 'dashboard'])->middleware('isLoggedIn');
 //Product Table
-Route::get('/products',[UserAuth::class,'products'])->middleware('isLoggedIn');
+// Route::get('/products',[UserAuth::class,'products'])->middleware('isLoggedIn');
+Route::resource("products", AdminproductController::class)->middleware('isLoggedIn');
 //Add product page
 Route::get('/addproducts',[UserAuth::class,'addproducts'])->middleware('isLoggedIn');
 //Add product POST

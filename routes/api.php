@@ -30,4 +30,4 @@ Route::resource('flower', FlowerController::class);
 Route::resource('product', ProductController::class);
 Route::post('message', [MessageController::class, 'store']);
 Route::get('message', [MessageController::class, 'index']);
-Route::get('/', [ProductController::class, 'tblProducts']);
+// Route::get('/', [ProductController::class, 'tblProducts']);
